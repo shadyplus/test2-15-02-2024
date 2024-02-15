@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+ <meta charset="utf-8">
+ <!-- Page title -->
+ <title>Free Spirit Tours</title>
+ <!-- Project favicon link -->
+ <link rel="icon" href="assets/images/favicon.png" type="image/gif">
+ <!-- All device viewport meta -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Fonts style file -->
+ <link rel="stylesheet" href="assets/css/all-fontawesome.min.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+ <!-- Custom Libraries style start -->
+
+ <!-- Swiper Bundle slider style file -->
+ <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css">
+ <!-- Aos animation style file -->
+ <link rel="stylesheet" type="text/css" href="assets/css/aos.css">
+ <!-- Magnific Popup style file -->
+ <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+ <!-- Custom Libraries style end -->
+
+ <!-- Custom style file -->
+ <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+
+
+</head>
+<body>
+  <div class="text-md md:text-lg font-red-hat-display text-dark-800 leading-xl"  x-data="{ show: false , open: false }">
+
+    <!-- Header search popup -->
+    <div :class="{ 'open': show }" class="search-popup transition-all fixed -top-full left-0 w-full h-full bg-black/80 z-50 flex items-center">
+      <a href="javascript:;" @click="show = !show" :aria-expanded="show ? 'false' : 'true'" class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center"><img src="assets/images/close.svg" alt="close"></a>
+      <!-- container -->
+        <div class="container text-center">
+          <form>
+            <div class="border-b border-white relative pr-[80px]">
+              <input type="text" placeholder="Search here" name="" class="bg-transparent px-0 py-3 md:py-5 text-white text-left w-full text-md md:text-25">
+              <button class="bg-primary-900 absolute top-0 right-0 w-12 h-10 md:w-[75px] md:h-[60px] rounded-sm text-white"><i class="fa-regular fa-magnifying-glass"></i></button>
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <!-- start-header -->
+    <header class="header header-style3 fixed top-0 left-0 w-full z-20 text-white" :class="{ 'header-open': open }">
+      <div class="overlay lg:hidden" @click="open = !open" :aria-expanded="open ? 'true' : 'false'"></div>
+      <!-- start header main navigation -->
+      <div class="main-navigation">
+        <!-- container -->
+        <div class="container flex items-center justify-between">
+          <div class="flex items-center ">
+
+            <!-- header logo-->
+            <div class="logo">
+              <!-- Normal logo -->
+              <a href="javascript:;" class="max-w-[150px] sm:max-w-auto block" id="normalLogo">
+                <img style="width:auto;" src="./assets/images/logo_white.svg" alt="">
+              </a>
+              <!-- Sticky logo -->
+              <a href="javascript:;" class="max-w-[150px] sm:max-w-auto block hidden" id="stickyLogo">
+                <img style="width:auto;" src="./assets/images/logo_optimised.svg" alt="">
+              </a>
+            </div>
+            <!-- <div><h4 class="text-white" >FST</h4></div> -->
+          </div>
+          <div class="flex">
+            <!-- main menu -->
+            <div class="main-menu lg:block">
+              <button type="button" class="absolute top-0 right-0 lg:hidden p-1" @click="open = !open" :aria-expanded="open ? 'true' : 'false'">
+                <img src="assets/images/close-dark.svg" alt="menu-close-icon">
+              </button>
+              <ul class="lg:flex items-center lg:gap-6 text-sm lg:text-md text-dark-900 lg:text-white font-semibold">
+                <li class="active"><a href="index-3.html" class="hover:text-primary-900">الرئيسية</a></li>
+                <li><a href="about.html" class="hover:text-primary-900">عن الشركة</a></li>
+                <li><a href="destination.html" class="hover:text-primary-900">الوجهات</a></li>
+                <!-- <li><a href="tour.html" class="hover:text-primary-900"></a></li> -->
+                <li><a href="blog-grid.html" class="hover:text-primary-900">المدونة</a></li>
+                <li><a href="hotels.html" class="hover:text-primary-900">الفنادق</a></li>
+                <!-- <li><a href="javascript:;" class="hover:text-primary-900">Pages</a> -->
+
+                  <!-- Mega menu -->
+                  <div class="mega-menu hidden lg:absolute lg:top-[74px] lg:left-0 bg-white w-full pt-3">
+                    <div class="container">
+                      <div class="lg:flex lg:py-8">
+                        <div class="w-full lg:w-2/3 md:grid md:grid-cols-3">
+                          <div>
+                            <h4 class="text-lg font-bold mb-3">Home page</h4>
+                            <ul class="text-lg text-dark-800">
+                              <li><a href="index-1.html">Home v1</a></li>
+                              <li><a href="index-2.html">Home v2</a></li>
+                              <li><a href="index-3.html">Home v3</a></li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 class="text-lg font-bold mb-3">Booking pages</h4>
+                            <ul class="text-lg text-dark-800">
+                              <li><a href="hotels.html">Hotels</a></li>
+                              <li><a href="portfolio.html">Portfolio</a></li>
+                              <li><a href="tour.html">Tours</a></li>
+                              <li><a href="gallery.html">Gallery</a></li>
+                              <li><a href="testimonial.html">Testimonial</a></li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 class="text-lg font-bold mb-3">Other pages</h4>
+                            <ul class="text-lg text-dark-800">
+                              <li><a href="login.html">Login</a></li>
+                              <li><a href="register.html">Sign in</a></li>
+                              <li><a href="404.html">404 Error</a></li>
+                              <li><a href="faqs.html">Faqs</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="w-full hidden lg:block max-w-[300px] xl:max-w-[400px] shrink-0">
+                          <!-- menu add -->
+                          <div class="py-10 px-5 lg:px-8 relative rounded-5xl overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full">
+                              <img src="assets/images/summer-escaps-img.png" alt="weekly-flash-deels-img" class="block w-full h-full object-cover">
+                            </div>
+                            <div class="relative max-w-[200px]">
+                              <h4 class="mb-3 text-2xl leading-[30px] lg:text-[28px]">Summer escaps</h4>
+                              <p class="text-dark-900 text-md mb-5">Plan your next trip with us.</p>
+                              <a href="booking-detail.html" class="btn btn-light btn-md shadow-btn mx-0">View deals <i class="fa-regular fa-arrow-right ml-3"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li><a href="contact.html" class="hover:text-primary-900">تواصل</a></li>
+              </ul>
+            </div>
+            <!-- Header right menu-->
+            <div class="flex items-center justify-end">
+              <!-- header menu icon -->
+              <div class="block lg:hidden px-4 leading-[0]" id="normalMenuIcon">
+                <button type="button" @click="open = !open" :aria-expanded="open ? 'true' : 'false'">
+                  <img src="assets/images/tabler-menu-icon.svg" style="height: 32px;" alt="menu-toggle-icon">
+                </button>
+              </div>
+              <div class="block lg:hidden px-4 leading-[0] hidden" id="stickyMenuIcon">
+                <button type="button" @click="open = !open" :aria-expanded="open ? 'true' : 'false'">
+                  <img src="assets/images/tabler-menu-icon_dark.svg" style="height: 32px;" alt="sticky-menu-toggle-icon">
+                </button>
+              </div>
+              
+              <!-- header user -->
+              <!-- <div class="user-icon ml-4 pl-5 border-l border-white">
+                <a href="register.html" class="text-white hover:text-primary-900">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22" fill="none">
+                    <path d="M15.638 9.625C16.046 9.73958 16.4345 9.89509 16.8034 10.0915C17.1723 10.2879 17.5586 10.5867 17.9622 10.9877C18.3659 11.3888 18.7109 11.8614 18.9974 12.4057C19.2839 12.95 19.5226 13.6538 19.7135 14.5173C19.9045 15.3808 20 16.3486 20 17.4208C20 18.6812 19.566 19.7595 18.6979 20.6557C17.8299 21.5519 16.7839 22 15.5599 22H4.4401C3.21615 22 2.17014 21.5519 1.30208 20.6557C0.434028 19.7595 0 18.6812 0 17.4208C0 16.3486 0.0954861 15.3808 0.286458 14.5173C0.477431 13.6538 0.716146 12.95 1.0026 12.4057C1.28906 11.8614 1.63411 11.3888 2.03776 10.9877C2.44141 10.5867 2.82769 10.2879 3.19661 10.0915C3.56554 9.89509 3.95399 9.73958 4.36198 9.625C3.67622 8.60193 3.33333 7.48884 3.33333 6.28571C3.33333 5.43452 3.50911 4.62221 3.86068 3.84877C4.21224 3.07533 4.6875 2.40625 5.28646 1.84152C5.88542 1.27679 6.59505 0.828683 7.41536 0.49721C8.23568 0.165737 9.09722 0 10 0C10.9028 0 11.7643 0.165737 12.5846 0.49721C13.4049 0.828683 14.1146 1.27679 14.7135 1.84152C15.3125 2.40625 15.7878 3.07533 16.1393 3.84877C16.4909 4.62221 16.6667 5.43452 16.6667 6.28571C16.6667 7.48884 16.3238 8.60193 15.638 9.625ZM10 1.57143C8.61979 1.57143 7.44141 2.03181 6.46484 2.95257C5.48828 3.87333 5 4.98438 5 6.28571C5 7.58705 5.48828 8.6981 6.46484 9.61886C7.44141 10.5396 8.61979 11 10 11C11.3802 11 12.5586 10.5396 13.5352 9.61886C14.5117 8.6981 15 7.58705 15 6.28571C15 4.98438 14.5117 3.87333 13.5352 2.95257C12.5586 2.03181 11.3802 1.57143 10 1.57143ZM15.5599 20.4286C16.3238 20.4286 16.977 20.136 17.5195 19.5508C18.0621 18.9656 18.3333 18.2556 18.3333 17.4208C18.3333 15.4647 17.9926 13.9219 17.3112 12.7924C16.6298 11.6629 15.651 11.0696 14.375 11.0123C13.1163 12.0517 11.658 12.5714 10 12.5714C8.34201 12.5714 6.88368 12.0517 5.625 11.0123C4.34896 11.0696 3.37023 11.6629 2.6888 12.7924C2.00738 13.9219 1.66667 15.4647 1.66667 17.4208C1.66667 18.2556 1.93793 18.9656 2.48047 19.5508C3.023 20.136 3.67622 20.4286 4.4401 20.4286H15.5599Z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div> -->
+
+              <!-- header search -->
+              <!-- <div class="search-icon">
+                <a href="javascript:;" @click="show = !show" :aria-expanded="show ? 'true' : 'false'" :class="{ 'active': show }" class="ml-4 pl-5 border-l border-white flex items-center justify-center text-white text-sm hover:text-primary-900">
+                  <i class="fa-regular fa-magnifying-glass"></i>
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end header main navigation -->
+      <!-- Mobile menu -->
+     
+      <!-- End Mobile menu -->
+    </header>
+    <!-- end-header -->
+
+    <!-- start main wrapper -->
+    <div class="main-wrapper">
+      <!-- start hero section -->
+      <section class="hero-section min-h-[calc(100vh-116px)] bg-primary-800 mb-10 relative grid content-end pt-24 pb-5 md:py-20 lg:py-28">
+        <!-- hero banner img -->
+          <div class="">
+            <div class="absolute top-0 right-0 w-full h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black/40">
+              <img src="assets/images/home-slider-img1.jpg" alt="hero img" class="w-full h-full object-cover">
+            </div>
+            <!-- container -->
+            <div class="container relative z-1 top-1/2 transform -translate-y-2/4">
+              <div class="flex justify-between mb-7 sm:mb-24">
+                <div class="max-w-sm lg:max-w-md xl:max-w-xl">
+                  <h1 class="mb-5 md:mb-7 text-white text-3xl sm:text-2xl xl:text-65 leading-tight ">فري سبيريت تورز</h1>
+                  <h5 class="text-white">الأسم الموثوق للسياحة و السفر</h5>
+                </div>
+                
+                <div class="w-[150px] h-[150px] md:w-[230px] md:h-[230px] rounded-full flex items-center justify-center bg-primary-900/20">
+                  <div class="w-[110px] h-[110px] md:w-[135px] md:h-[135px] rounded-full flex items-center justify-center bg-primary-900/20">
+                    <svg class="plane" width="135px" height="66px" viewBox="0 0 135 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g id="1.0.1-Select-Dates-Copy-27" transform="translate(-95.000000, -143.000000)">
+                              <g id="plane_1" transform="translate(90.000000, 128.000000)">
+                                  <path d="M126.078835,15.0030457 C125.461384,15.0108637 124.789222,15.0655939 124.140507,15.1281422 C121.530018,15.3705172 118.677235,16.0194559 115.761928,17.3173313 C115.761928,17.3173313 104.538383,22.3602842 95.2531661,26.5119254 L72.681023,19.5690686 C71.1725665,19.1077747 69.5390567,18.9044939 67.9915195,18.8810378 C66.4439844,18.8575817 65.0449487,18.9904982 63.7397031,19.5690686 L60.6133674,20.9451303 C60.0897057,21.1796873 59.4566233,21.5549769 59.1127264,22.321192 C58.7688294,23.0874092 58.8704348,24.0178131 59.1752531,24.6354776 C59.7692568,25.8395326 60.7384209,26.4650152 62.1140085,27.1999563 L62.1765353,27.2625045 L75.4321983,35.33123 C68.7574727,38.3179103 59.7223628,42.3679091 59.2377798,42.586828 C58.8157255,42.7744728 58.8157255,42.7041065 58.4874592,42.586828 C58.159195,42.4695495 57.5651912,42.09426 56.799238,41.5235076 C54.0871413,39.5219633 50.0776164,36.6056512 48.9208722,35.7065195 C47.1388609,34.3460959 45.020768,34.3304578 43.105888,34.9559404 C42.1523566,35.2686817 41.1831926,35.7925239 40.5422928,36.8323882 C39.9013939,37.8722525 39.8154196,39.3812307 40.3547126,40.5852837 C41.6912216,43.5876002 45.9117747,52.8760167 47.4827578,56.4099933 C48.3346838,58.3255333 50.1166951,59.6468668 52.2973147,60.2254372 C54.4779343,60.8040096 57.1040562,60.7805535 60.2382072,60.3505337 C66.5065111,59.4826761 74.9397999,56.7696468 85.5615257,52.0316152 C86.397821,51.6563256 87.3591697,51.2419439 88.2501744,50.8431983 L83.6231976,75.2995676 L83.6231976,75.4246642 C83.2558527,76.9180043 83.0682726,78.0673291 83.5606709,79.3026562 C83.8185931,79.9359569 84.4516776,80.6083516 85.2488922,80.8663627 C86.0461087,81.1243738 86.7260852,80.9680031 87.249747,80.7412662 L90.3760826,79.3652045 C91.6735129,78.7866341 92.736467,77.7858619 93.752525,76.6130811 C94.7685851,75.4403022 95.7221165,74.0407844 96.378647,72.6099925 L96.3161203,72.6099925 L111.197478,40.397639 C118.622526,36.9183925 125.750571,33.4547822 130.955919,30.515014 C133.636752,28.9982197 135.833003,27.622158 137.39617,26.3868289 C138.177754,25.7691643 138.771758,25.20623 139.271972,24.5103811 C139.772185,23.8145322 140.319295,22.6730255 139.772185,21.4455164 C138.529467,18.6621189 135.418764,16.5980263 131.206026,15.56598 C129.627227,15.1828724 127.939006,14.9717716 126.078835,15.0030457 Z M126.078835,19.0061343 C127.61074,19.0061343 129.017591,19.2015971 130.268125,19.5065204 C133.152169,20.2101893 134.910735,21.6175251 135.645422,22.5713851 C135.442212,22.7824859 135.29371,22.9466746 134.895102,23.2594159 C133.652383,24.244552 131.612449,25.5502454 129.017591,27.0123115 C123.835689,29.9364436 116.527881,33.5095124 108.883989,37.0825812 L108.196196,37.3953225 L107.883562,38.0833534 L92.6895709,70.9837377 C92.2284359,71.9923279 91.5328268,73.0869225 90.7512429,73.9860542 C89.9696589,74.8851859 89.0630216,75.5341246 88.7503881,75.6748572 L87.4998538,76.2377915 L87.4998538,76.1752433 L92.8146244,47.8408818 L93.5649449,44.0879863 L90.063449,45.6516927 C87.8984621,46.6211908 85.8507113,47.5515966 83.9358312,48.4038161 C73.5173182,53.0480254 65.3575823,55.6359581 59.7379935,56.4099933 C56.9321068,56.800921 54.7514892,56.7149166 53.3602688,56.3474451 C51.9690505,55.9799736 51.4141254,55.4639514 51.1093072,54.7837386 C49.5305087,51.2497619 45.3724823,41.9535274 44.0437886,38.959029 C44.0125253,38.8808447 43.9968946,38.9121188 43.9812619,38.8964807 C44.051604,38.8417505 44.1844748,38.7635662 44.3564222,38.708836 C45.044216,38.482099 46.310383,38.7635662 46.4823304,38.8964807 L46.4823304,38.8339325 C47.7875761,39.8425227 51.7033109,42.7744728 54.4232229,44.7760171 C55.2204395,45.3624075 56.0254694,46.0035262 57.1118716,46.4022719 C58.1982737,46.8010175 59.6129401,46.7775614 60.8634743,46.2146271 C61.4340301,45.964434 71.4695674,41.4453233 80.1217017,37.5829673 C80.1920438,37.5516932 80.2389398,37.6142414 80.3092819,37.5829673 C80.5046773,37.5282371 80.7000748,37.4422347 80.8720223,37.3327743 C80.9032856,37.3171382 80.9032856,37.2858641 80.934549,37.270226 C80.957997,37.2467699 80.9736277,37.2311338 80.9970757,37.2076777 C87.6639859,34.2366354 88.7972841,33.7206133 95.5657997,30.7026588 C95.6283264,30.6870227 95.6908531,30.6635666 95.7533798,30.6401105 C95.7768279,30.6322925 95.7924585,30.6479285 95.8159066,30.6401105 C96.2379629,30.5932003 96.6287538,30.4211916 96.9413874,30.1397244 C96.9648354,30.1162683 96.9804661,30.1006323 97.0039141,30.0771762 C106.203156,25.9802652 117.387622,21.0076786 117.387622,21.0076786 C119.919954,19.8818099 122.350681,19.2719654 124.515668,19.0686825 C125.05496,19.0217723 125.570806,19.0061343 126.078835,19.0061343 Z M67.9289928,22.8841264 C69.1170003,22.9075825 70.4300613,23.0561351 71.4930154,23.3845124 L89.7508155,28.9513075 C84.9597066,31.0935864 84.4673082,31.3046853 79.9341216,33.3296857 L64.1773901,23.759802 L65.3653976,23.1968677 C65.6780312,23.0561351 66.7409853,22.8606703 67.9289928,22.8841264 Z" id="Plane-1" fill="#fff" fill-rule="nonzero"></path>
+                                  <path class="jet" d="M8,76.2398265 L17.6181507,79 C29.6181507,73 35.6181507,70 35.6181507,70" id="Line" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="bevel"></path>
+                                  <path class="jet" d="M8,66.2398265 L17.6181507,69 C29.6181507,63 35.6181507,60 35.6181507,60" id="Line" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="bevel"></path>
+                                  <path class="jet" d="M7.88184931,55.7398265 L17.5,58.5 C29.5,52.5 35.5,49.5 35.5,49.5" id="Line" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="bevel"></path>
+                              </g>
+                          </g>
+                      </g>
+                  </svg>
+                    <!-- <a href="" class=" bg-primary-900 text-white w-[70px] h-[70px] rounded-full flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+                      <path d="M12.7935 9.81575V38.1843C12.7935 38.7827 13.4012 39.1567 13.8874 38.8575L36.3747 24.6732C36.8515 24.374 36.8515 23.6353 36.3747 23.3361L13.8874 9.15188C13.4012 8.84333 12.7935 9.21734 12.7935 9.81575Z" fill="currentColor"/>
+                    </svg>
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- start hero content -->
+              <!-- <div class="sm:flex justify-between">
+                <div class="text-white mb-3 sm:mb-0">
+                  <span class="mb-2 block text-sm md:text-lg">Price</span>
+                  <h2 class="text-white text-xl md:text-3xl mb-2 leading-normal"><sup class=" text-lg">$</sup>1277</h2>
+                  <p class="m-0">6 Days tour for 2 persons</p>
+                </div>
+                <div class="text-white mb-3 sm:mb-0">
+                  <span class="mb-2 block text-sm md:text-lg">5 Star</span>
+                  <h2 class="text-white text-xl md:text-3xl mb-2 leading-normal">Hotel</h2>
+                  <p class="m-0">Hotels on choice</p>
+                </div>
+                <div class="text-white mb-3 sm:mb-0">
+                  <span class="mb-2 block text-sm md:text-lg">Flight</span>
+                  <h2 class="text-white text-xl md:text-3xl mb-2 leading-normal">15th</h2>
+                  <p class="m-0">December or later</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="hidden lg:block absolute right-14 top-1/2 space-y-3 transform -translate-y-2/4 text-center">
+            <a href="#" class="text-white block hover:text-primary-900 text-xl"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-white block hover:text-primary-900 text-xl"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white block hover:text-primary-900 text-xl"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="text-white block hover:text-primary-900 text-xl"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        
+        
+        <!-- booking form -->
+        <div class="relative z-1 md:absolute -bottom-10 left-0 w-full">
+          <!-- container -->
+          <div class="container">
+            <div class="booking-form bg-white shadow-card rounded-xl px-5 py-5 text-left w-full  md:flex gap-5 items-end">
+              <div class="w-full text-dark-800 font-normal text-lg">
+                <input type="text" placeholder="الكلمات المفتاحية" name="" class="form-control w-full py-4 border-b border-primary-800 outline-none">
+              </div>
+              <div class="w-full text-dark-800 font-normal text-lg">
+                <select class="form-control w-full py-4 border-b border-primary-800 outline-none shadow-none">
+                  <option>اختر الدولة</option>
+                  <option>جورجيا</option>
+                  <option>تركيا</option>
+                  <option>المالديف</option>
+                  <option>المغرب</option>
+                  <option>اليونان</option>
+                </select>
+              </div>
+              <div class="w-full text-dark-800 font-normal text-lg">
+                <input type="text" placeholder="الافراد" name="" class="form-control w-full py-4 border-b border-primary-800 outline-none">
+              </div>
+              <div class="fl">
+                <button type="button" class="bg-primary-900 btn gap-2 w-full max-w-full mt-5 md:mt-0 px-5 rounded-md flex items-center justify-center text-white text-xl hover:bg-dark-900">
+                  <i class="fa-regular fa-magnifying-glass"></i> بحث
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- end hero section -->
+
+      <!-- start Trending Attractions section -->
+      <section class="relative">
+          <!-- container -->
+          <div class="container relative z-1">
+              <!-- section heading -->
+              <div class="mb-8 md:mb-14 max-w-[500px]">
+                <h2 class="">اشهر الجولات</h2>
+                <p class="">عرفها وباستثناء انه كل, وعلى وصغار والإتحاد بل الا. بلا في البرية سليمان،, دار ترتيب النفط بالعمل قد. بل الأثنان بالتوقيع حين. قد أخر مكّن تمهيد الساحل, كل إعادة ممثّلة التبرعات عدم. من بوابة السفن الإنذار، به،, كان قتيل، بأيدي الثالث، عن, عن حدى تسبب لهيمنة. </p>
+              </div>
+              <!-- Trending Attractions slider -->
+              <div class="trending-attractions-slider">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="text-center max-w-[250px] mx-auto">
+                        <div class="overflow-hidden relative group rounded-[200px] before:block before:pt-[132%]">
+                          <a href="tour-detail.html" class="absolute top-0 left-0 h-full w-full block">
+                            <img src="assets/images/portfolio-img3.jpg" alt="صورة المدونة 1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
+                          </a>
+                        </div>
+                        <div class="w-[84px] h-[84px] shadow-box-3 -mt-10 relative mb-4 rounded-full bg-white flex items-center justify-center mx-auto">
+                          <img src="assets/images/beach-tours-icon-1.svg" alt="أيقونة الشاطئ 1">
+                        </div>
+                        <h3 class="text-xl mb-2">جولات الشاطئ</h3>
+                        <p class="text-md mb-0">10 جولات - بدءًا من <span class="text-primary-900">440$</span></p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="text-center max-w-[250px] mx-auto">
+                        <div class="overflow-hidden relative group rounded-[200px] before:block before:pt-[132%]">
+                          <a href="tour-detail.html" class="absolute top-0 left-0 h-full w-full block">
+                            <img src="assets/images/portfolio-img2.jpg" alt="صورة المدونة 1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
+                          </a>
+                        </div>
+                        <div class="w-[84px] h-[84px] shadow-box-3 -mt-10 relative mb-4 rounded-full bg-white flex items-center justify-center mx-auto">
+                          <img src="assets/images/beach-tours-icon-2.svg" alt="أيقونة الشاطئ 2">
+                        </div>
+                        <h3 class="text-xl mb-2">جولات الصحراء</h3>
+                        <p class="text-md mb-0">5 جولات - بدءًا من <span class="text-primary-900">550$</span></p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="text-center max-w-[250px] mx-auto">
+                        <div class="overflow-hidden relative group rounded-[200px] before:block before:pt-[132%]">
+                          <a href="tour-detail.html" class="absolute top-0 left-0 h-full w-full block">
+                            <img src="assets/images/portfolio-img8.jpg" alt="صورة المدونة 1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
+                          </a>
+                        </div>
+                        <div class="w-[84px] h-[84px] shadow-box-3 -mt-10 relative mb-4 rounded-full bg-white flex items-center justify-center mx-auto">
+                          <img src="assets/images/beach-tours-icon-3.svg" alt="أيقونة الشاطئ 3">
+                        </div>
+                        <h3 class="text-xl mb-2">جولات المالديف</h3>
+                        <p class="text-md mb-0">4 جولات - بدءًا من <span class="text-primary-900">1050$</span></p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="text-center max-w-[250px] mx-auto">
+                        <div class="overflow-hidden relative group rounded-[200px] before:block before:pt-[132%]">
+                          <a href="tour-detail.html" class="absolute top-0 left-0 h-full w-full block">
+                            <img src="assets/images/top-destinations-img-3.jpg" alt="صورة المدونة 1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
+                          </a>
+                        </div>
+                        <div class="w-[84px] h-[84px] shadow-box-3 -mt-10 relative mb-4 rounded-full bg-white flex items-center justify-center mx-auto">
+                          <img src="assets/images/beach-tours-icon-4.svg" alt="أيقونة الشاطئ 4">
+                        </div>
+                        <h3 class="text-xl mb-2">جولات الجبال</h3>
+                        <p class="text-md mb-0">7 جولات - بدءًا من <span class="text-primary-900">780$</span></p>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="swiper-pagination static mt-10 bg-primary-800"></div>
+                </div>
+              </div>
+              
+              </div>
+          </div>
+        </section>
+        <!-- end Trending Attractions section -->
+
+<!-- بدء قسم حول -->
+<section class="about-section py-10 md:mb-10">
+  <!-- الحاوية -->
+  <div class="container">
+      <div class="flex flex-wrap -mx-4">
+          <!-- صورة المعرض حول -->
+          <div class="w-full md:w-2/4 px-4 lg:pr-14">
+              <div class="overflow-hidden relative rounded-5xl before:block before:pt-full">
+                  <img src="assets/images/customer-reviews-img.jpg" alt="صورة تقييم العملاء" class="absolute top-0 left-0 w-full h-full object-cover">
+                  <a href="javascript:;" class="text-white w-12 h-12 md:w-20 md:h-20 -ml-6 -mt-6 md:-ml-10 md:-mt-10 absolute inset-y-1/2 transition-all duration-300 inset-x-1/2 border-2 border-white rounded-2xl flex items-center justify-center hover:text-primary-900 hover:bg-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="38" viewBox="0 0 30 38" class="w-5 md:w-auto " fill="none">
+                          <path d="M26.7625 16.9852L8.08143 4.80185C7.82941 4.64955 7.55219 4.58189 7.27501 4.60502C6.99782 4.62815 6.72947 4.74134 6.49439 4.93429C6.2593 5.12724 6.06495 5.39381 5.92902 5.70975C5.79309 6.02569 5.71991 6.38096 5.71612 6.74321V31.0994C5.71377 31.4712 5.785 31.8376 5.92292 32.163C6.06085 32.4885 6.26081 32.762 6.50348 32.9572C6.74615 33.1524 7.02331 33.2627 7.30819 33.2773C7.59307 33.2919 7.87602 33.2104 8.1297 33.0407L26.7625 20.8574C27.0385 20.6767 27.2706 20.3994 27.4328 20.0566C27.5949 19.7138 27.6808 19.3189 27.6808 18.916C27.6808 18.5132 27.5949 18.1183 27.4328 17.7755C27.2706 17.4327 27.0385 17.1554 26.7625 16.9747V16.9852Z" fill="currentColor"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+          <!-- محتوى حول -->
+          <div class="w-full md:w-2/4 px-4 mt-10 md:mt-0">
+              <h2>حان الوقت للسفر مرة أخرى</h2>
+              <p>الخاسر العالمي ٣٠ جعل, هو ثانية وأزيز ولاتّساع لكل, الأراضي الواقعة لم بين. قد دول ساعة أراض, ليركز تغييرات أن ومن. هامش لغزو أي حتى, ذلك عل اللا أمدها الدنمارك, جزيرتي وبولندا أم نفس. و حدى البشريةً الجديدة، التنازلي, هو مئات بينما يكن, حين أفاق للجزر الإتحاد تم. مسرح اليابان الرئيسية كلّ و, انذار العمليات الأوروبي حول ان.</p>
+              <p>بين بشكل تعداد إذ, نفس كل لكون أملاً. عجّل قادة أطراف بـ قبل, مع حصدت مارد به،. على تم تعداد اتفاق التغييرات. عرفها وإقامة الإمداد أخر إذ, عدد اليميني الشهيرة أي. كل لان نقطة بخطوط ويكيبيديا, بها ٢٠٠٤ الحيلولة لم, بل أسابيع واعتلاء أضف. نهاية التقليدية أم انه, شيء تم بالرّغم المتساقطة،. أسر المواد الشّعبين الأثناء، ٣٠.</p>
+              <!-- <div class="flex flex-wrap lg:flex-nowrap items-center gap-5 text-md xl:text-lg text-dark-900 font-bold mb-5 md:mb-10">
+                  <a href="tel:+12345455454" class="flex items-center gap-2 xl:gap-4 hover:text-primary-900">
+                      <span class="bg-primary-900 w-[46px] h-[46px] rounded-full flex items-center justify-center text-white text-lg shrink-0"><i class="fa-solid fa-phone"></i></span>
+                      <div>
+                          <span class="text-dark-800 leading-normal block text-md font-semibold">اتصل</span>
+                          +1 23 456 456 2346
+                      </div>
+                  </a>
+                  <a href="mailto:journeya@gmail.com" class="flex items-center gap-2 xl:gap-4 hover:text-primary-900">
+                      <span class="bg-primary-900 w-[46px] h-[46px] rounded-full flex items-center justify-center text-white text-lg shrink-0"><i class="fa-solid fa-envelope"></i></span>
+                      <div>
+                          <span class="text-dark-800 leading-normal block text-md font-semibold">بريد</span>
+                          journeya@gmail.com
+                      </div>
+                  </a>
+              </div> -->
+              <a href="about.html" class="btn btn-outline-primary">اقرأ المزيد</a>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- نهاية قسم حول -->
+
+      <!-- end about section -->
+
+      <!-- start Choose Tour Types section -->
+      <section class="py-12">
+        <!-- الحاوية -->
+        <div class="container">
+            <div class="md:flex items-end justify-between mb-8 md:mb-14">
+                <div class="mb-5 md:mb-0">
+                    <h2>اختر أنواع الجولات</h2>
+                    <p class="md:max-w-[600px] m-0">نفس أوسع سنغافورة ان, أما بمعارضة الثالث، باستحداث بـ. قد أخر أساسي ليتسنّى, وفرنسا الحيلولة أن مكن. شيء أعمال بمعارضة الأثناء، في, أخذ القادة الولايات أم. ومن أي بالحرب الشهيرة الجديدة،.</p>
+                </div>
+                <div>
+                    <a href="tour.html" class="btn btn-primary">عرض الكل</a>
+                </div>
+            </div>
+    
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 lg:gap-14">
+                <!-- صندوق الأيقونة -->
+                <div class="text-center md:text-right">
+                    <div class="shrink-0 bg-primary-800 rounded-lg mx-auto w-[120px] h-[120px] flex items-center justify-center mb-4">
+                        <img src="assets/images/tour-types-icon-1.svg" alt="أيقونة الضمان" class="">
+                    </div>
+                    <div class="text-center">
+                        <h5 class="text-lg mb-1 text-center font-semibold">جولة الحياة البرية</h5>
+                        <p class="text-md mb-0">4 جولات بسعر 440 دولار</p>
+                    </div>
+                </div>
+                <!-- صندوق الأيقونة -->
+                <div class="text-center md:text-right">
+                    <div class="shrink-0 bg-primary-800 rounded-lg mx-auto w-[120px] h-[120px] flex items-center justify-center mb-4">
+                        <img src="assets/images/tour-types-icon-2.svg" alt="أيقونة الضمان" class="">
+                    </div>
+                    <div class="">
+                        <h5 class="text-lg mb-1 text-center font-semibold">جولة المغامرة</h5>
+                        <p class="text-md mb-0">5 جولات بسعر 880 دولار</p>
+                    </div>
+                </div>
+                <!-- صندوق الأيقونة -->
+                <div class="text-center md:text-right">
+                    <div class="shrink-0 bg-primary-800 rounded-lg mx-auto w-[120px] h-[120px] flex items-center justify-center mb-4">
+                        <img src="assets/images/tour-types-icon-3.svg" alt="أيقونة الضمان" class="">
+                    </div>
+                    <div class="">
+                        <h5 class="text-lg mb-1 text-center font-semibold">جولة المدينة</h5>
+                        <p class="text-md mb-0">10 جولات بسعر 599 دولار</p>
+                    </div>
+                </div>
+                <!-- صندوق الأيقونة -->
+                <div class="text-center md:text-right">
+                    <div class="shrink-0 bg-primary-800 rounded-lg mx-auto w-[120px] h-[120px] flex items-center justify-center mb-4">
+                        <img src="assets/images/tour-types-icon-4.svg" alt="أيقونة الضمان" class="">
+                    </div>
+                    <div class="">
+                        <h5 class="text-lg mb-1 text-center font-semibold">جولة المتحف</h5>
+                        <p class="text-md mb-0">6 جولات بسعر 800 دولار</p>
+                    </div>
+                </div>
+                <!-- صندوق الأيقونة -->
+                <div class="text-center md:text-right">
+                    <div class="shrink-0 bg-primary-800 rounded-lg mx-auto w-[120px] h-[120px] flex items-center justify-center mb-4">
+                        <img src="assets/images/tour-types-icon-5.svg" alt="أيقونة الضمان" class="">
+                    </div>
+                    <div class="">
+                        <h5 class="text-lg mb-1 text-center font-semibold">جولة الشاطئ</h5>
+                        <p class="text-md mb-0">9 جولات بسعر 455 دولار</p>
+                    </div>
+                </div>
+                <!-- صندوق الأيقونة -->
+                <div class="text-center md:text-right">
+                    <div class="shrink-0 bg-primary-800 rounded-lg mx-auto w-[120px] h-[120px] flex items-center justify-center mb-4">
+                        <img src="assets/images/tour-types-icon-6.svg" alt="أيقونة الضمان" class="">
+                    </div>
+                    <div class="">
+                        <h5 class="text-lg mb-1 text-center font-semibold">جولة التسلق</h5>
+                        <p class="text-md mb-0">3 جولات بسعر 1099 دولار</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      <!-- end Choose Tour Types section -->
+
+      <!-- start Popular Tours section -->
+      <section class="py-12 popular-tours-slider">
+        <!-- الحاوية -->
+        <div class="container">
+            <div class="md:flex items-end justify-between mb-8 md:mb-14">
+                <div class="mb-5 md:mb-0">
+                    <h2>الجولات الشهيرة</h2>
+                    <p class="md:max-w-[600px] m-0">نفس أوسع سنغافورة ان، أما بمعارضة الثالث، باستحداث بـ. قد أخر أساسي ليتسنّى، وفرنسا الحيلولة أن مكن. شيء أعمال بمعارضة الأثناء، في، أخذ القادة الولايات أم. ومن أي بالحرب الشهيرة الجديدة،.</p>
+                </div>
+                <div>
+                    <!-- سهم المنزلق -->
+                    <div class="slider-arrow text-2xl flex items-center text-primary-900 gap-1">
+                        <div class="swiper-button-prev static m-0 after:hidden"><i class="fa-light fa-arrow-left text-primary-900"></i></div>
+                        <div class="swiper-pagination static m-0 flex justify-center items-center gap-0"></div>
+                        <div class="swiper-button-next static m-0 after:hidden"><i class="fa-light fa-arrow-right text-primary-900"></i></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="popular-tours-grid">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- مربع الجولات الشهيرة -->
+                            <div class="relative group">
+                                <!-- صورة الجولات الشهيرة -->
+                                <div class="relative w-full overflow-hidden before:pt-[75%] before:block rounded-xl">
+                                    <a href="tour-detail.html"><img src="assets/images/top-destinations-img-7.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"></a>
+                                </div>
+                                <!-- معلومات الجولات الشهيرة -->
+                                <div class="pb-5 -mt-6 relative">
+                                    <div class="shadow-box p-3 bg-white mb-5 rounded-md flex items-center justify-between w-[90%] mx-auto">
+                                        <div class="flex items-center gap-2 text-dark-900 text-md font-medium"><i class="fa-regular fa-calendar text-lg"></i> 5 أيام</div>
+                                        <div class="text-primary-900 text-md font-bold">$450.00</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <h3 class="text-xl xl:leading-normal mb-2 hover:text-primary-900"><a href="tour-detail.html">اكتشاف جولة التجديف في الجزر</a></h3>
+                                        <p class="text-md leading-normal mb-2 flex items-center justify-center text-dark-800"><i class="fa-solid fa-location-dot mr-2"></i> سولديو، أندورا</p>
+                                        <p class="text-md leading-normal mb-0 text-dark-800">نص فارغ مؤقت للنص الورقي، يستخدم في صناعات المطبوعات ودور النشر.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- مربع الجولات الشهيرة -->
+                            <div class="relative group">
+                                <!-- صورة الجولات الشهيرة -->
+                                <div class="relative w-full overflow-hidden before:pt-[75%] before:block rounded-xl">
+                                    <a href="tour-detail.html"><img src="assets/images/popular-tours-img12.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"></a>
+                                </div>
+                                <!-- معلومات الجولات الشهيرة -->
+                                <div class="pb-5 -mt-6 relative">
+                                    <div class="shadow-box p-3 bg-white mb-5 rounded-md flex items-center justify-between w-[90%] mx-auto">
+                                        <div class="flex items-center gap-2 text-dark-900 text-md font-medium"><i class="fa-regular fa-calendar text-lg"></i> 7 أيام</div>
+                                        <div class="text-primary-900 text-md font-bold">$1250.00</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <h3 class="text-xl xl:leading-normal mb-2 hover:text-primary-900"><a href="tour-detail.html">سطح بيت النطاطات، قلعة وندسور</a></h3>
+                                        <p class="text-md leading-normal mb-2 flex items-center justify-center text-dark-800"><i class="fa-solid fa-location-dot mr-2"></i> وندسور</p>
+                                        <p class="text-md leading-normal mb-0 text-dark-800">نص فارغ مؤقت للنص الورقي، يستخدم في صناعات المطبوعات ودور النشر.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- مربع الجولات الشهيرة -->
+                            <div class="relative group">
+                                <!-- صورة الجولات الشهيرة -->
+                                <div class="relative w-full overflow-hidden before:pt-[75%] before:block rounded-xl">
+                                    <a href="tour-detail.html"><img src="assets/images/top-destinations-img-8.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"></a>
+                                </div>
+                                <!-- معلومات الجولات الشهيرة -->
+                                <div class="pb-5 -mt-6 relative">
+                                    <div class="shadow-box p-3 bg-white mb-5 rounded-md flex items-center justify-between w-[90%] mx-auto">
+                                        <div class="flex items-center gap-2 text-dark-900 text-md font-medium"><i class="fa-regular fa-calendar text-lg"></i> 5 أيام</div>
+                                        <div class="text-primary-900 text-md font-bold">$450.00</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <h3 class="text-xl xl:leading-normal mb-2 hover:text-primary-900"><a href="tour-detail.html">جولة إدنبرة من السماء إلى البحر</a></h3>
+                                        <p class="text-md leading-normal mb-2 flex items-center justify-center text-dark-800"><i class="fa-solid fa-location-dot mr-2"></i> سيوتات فيلا، برشلونة</p>
+                                        <p class="text-md leading-normal mb-0 text-dark-800">نص فارغ مؤقت للنص الورقي، يستخدم في صناعات المطبوعات ودور النشر.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- مربع الجولات الشهيرة -->
+                            <div class="relative group">
+                                <!-- صورة الجولات الشهيرة -->
+                                <div class="relative w-full overflow-hidden before:pt-[75%] before:block rounded-xl">
+                                    <a href="tour-detail.html"><img src="assets/images/popular-tours-img12.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"></a>
+                                </div>
+                                <!-- معلومات الجولات الشهيرة -->
+                                <div class="pb-5 -mt-6 relative">
+                                    <div class="shadow-box p-3 bg-white mb-5 rounded-md flex items-center justify-between w-[90%] mx-auto">
+                                        <div class="flex items-center gap-2 text-dark-900 text-md font-medium"><i class="fa-regular fa-calendar text-lg"></i> 7 أيام</div>
+                                        <div class="text-primary-900 text-md font-bold">$1250.00</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <h3 class="text-xl xl:leading-normal mb-2 hover:text-primary-900"><a href="tour-detail.html">سطح بيت النطاطات، قلعة وندسور</a></h3>
+                                        <p class="text-md leading-normal mb-2 flex items-center justify-center text-dark-800"><i class="fa-solid fa-location-dot mr-2"></i> وندسور</p>
+                                        <p class="text-md leading-normal mb-0 text-dark-800">نص فارغ مؤقت للنص الورقي، يستخدم في صناعات المطبوعات ودور النشر.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- end Popular Tours section -->
+
+        <!-- start Top Destinations section -->
+        <section class="top-destinations-section-three">
+          <!-- الحاوية -->
+          <div class="container">
+              <!-- عنوان القسم -->
+              <div class="text-center mb-8 md:mb-14">
+                  <h2>أفضل الوجهات</h2>
+              </div>
+      
+              <!-- شبكة الفئات -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 lg:gap-7">
+                  <!-- مربع الفئة -->
+                  <div class="category-box col-span-2 before:block before:pt-[60%] overflow-hidden group rounded-1xl relative after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[150px] after:bg-gradient-to-t after:from-black after:to-black/0">
+                      <img src="assets/images/top-destinations-img-2.jpg" alt="categories img 1" class="transition-all group-hover:scale-105 absolute top-0 left-0">
+                      <div class="categories-detail text-left relative z-1">
+                          <a href="destination-detail.html" class="text-left block">
+                              <h4>أوروبا</h4>
+                              <div class="tours-btn m-0">4 جولات</div>
+                          </a>
+                      </div>
+                  </div>
+                  <!-- مربع الفئة -->
+                  <div class="category-box before:block before:pt-[120%] overflow-hidden group rounded-1xl relative after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[150px] after:bg-gradient-to-t after:from-black after:to-black/0">
+                      <img src="assets/images/customer-reviews-img.jpg" alt="categories img 1" class="transition-all group-hover:scale-105 absolute top-0 left-0">
+                      <div class="categories-detail text-left relative z-1">
+                          <a href="destination-detail.html" class="text-left block">
+                              <h4>سنغافورة</h4>
+                              <div class="tours-btn m-0">9 جولات</div>
+                          </a>
+                      </div>
+                  </div>
+                  <!-- مربع الفئة -->
+                  <div class="category-box before:block before:pt-[120%] overflow-hidden group rounded-1xl relative after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[150px] after:bg-gradient-to-t after:from-black after:to-black/0">
+                      <img src="assets/images/top-destinations-img-4.jpg" alt="categories img 1" class="transition-all group-hover:scale-105 absolute top-0 left-0">
+                      <div class="categories-detail text-left relative z-1">
+                          <a href="destination-detail.html" class="text-left block">
+                              <h4>مصر</h4>
+                              <div class="tours-btn m-0">5 جولات</div>
+                          </a>
+                      </div>
+                  </div>
+                  <!-- مربع الفئة -->
+                  <div class="category-box before:block before:pt-[120%] overflow-hidden group rounded-1xl relative after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[150px] after:bg-gradient-to-t after:from-black after:to-black/0">
+                      <img src="assets/images/portfolio-img2.jpg" alt="categories img 1" class="transition-all group-hover:scale-105 absolute top-0 left-0">
+                      <div class="categories-detail text-left relative z-1">
+                          <a href="destination-detail.html" class="text-left block">
+                              <h4>الصحراء</h4>
+                              <div class="tours-btn m-0">5 جولات</div>
+                          </a>
+                      </div>
+                  </div>
+                  <!-- مربع الفئة -->
+                  <div class="category-box before:block before:pt-[120%] overflow-hidden group rounded-1xl relative after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[150px] after:bg-gradient-to-t after:from-black after:to-black/0">
+                      <img src="assets/images/popular-tours-img10.jpg" alt="categories img 1" class="transition-all group-hover:scale-105 absolute top-0 left-0">
+                      <div class="categories-detail text-left relative z-1">
+                          <a href="destination-detail.html" class="text-left block">
+                              <h4>باريس</h4>
+                              <div class="tours-btn m-0">4 جولات</div>
+                          </a>
+                      </div>
+                  </div>
+                  <!-- مربع الفئة -->
+                  <div class="category-box col-span-2 before:block before:pt-[60%] overflow-hidden group rounded-1xl relative after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[150px] after:bg-gradient-to-t after:from-black after:to-black/0">
+                      <img src="assets/images/last-minute-deals-img4.jpg" alt="categories img 1" class="transition-all group-hover:scale-105 absolute top-0 left-0">
+                      <div class="categories-detail text-left relative z-1">
+                          <a href="destination-detail.html" class="text-left block">
+                              <h4>آيسلندا</h4>
+                              <div class="tours-btn m-0">3 جولات</div>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+      
+          </div>
+      </section>
+      
+        <!-- end Top Destinations section -->
+
+        <!-- start Why Choose us section -->
+        <section class="bg-primary-800">
+            <!-- الحاوية -->
+            <div class="container">
+                <!-- عنوان القسم -->
+                <div class="text-center mb-8 md:mb-14">
+                    <h2>لماذا تختارنا؟</h2>
+                    <p class="max-w-[590px] mx-auto">حيث أم أعمال لإعلان, تم كلّ مايو بالرّد بمباركة. بحشد التي بخطوط لم الى, وقد لعدم العالمي وإيطالي أن. بحشد حصدت بـ وفي, بال أي المتّبعة لبلجيكا،. ان خطّة مشاركة بال, دون هو تصفح والتي العالم.</p>
+                </div>
+        
+                <!-- شبكة اختيار السبب -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-7">
+                    <!-- مربع اختيار السبب -->
+                    <div class="rounded-tr-[25px] rounded-bl-[25px] shadow-card-2 bg-white p-5">
+                        <div class="w-[70px] h-[70px] rounded-full border-[5px] border-[#645cbb42] bg-primary-800 flex items-center justify-center mb-3">
+                            <img src="assets/images/tour-guide-icon.svg" alt="blog-img1" class="">
+                        </div>
+                        <h3 class="text-md md:text-lg mb-2">حجوزات مرنة</h3>
+                        <p class="text-md mb-0">حيث أم أعمال لإعلان, تم كلّ مايو بالرّد بمباركة. بحشد التي بخطوط لم الى, وقد لعدم العالمي وإيطالي أن. بحشد حصدت بـ وفي, بال أي المتّبعة لبلجيكا،. ان خطّة مشاركة بال, دون هو تصفح والتي العالم.</p>
+                    </div>
+                    <!-- مربع اختيار السبب -->
+                    <div class="rounded-tr-[25px] rounded-bl-[25px] shadow-card-2 bg-white p-5">
+                        <div class="w-[70px] h-[70px] rounded-full border-[5px] border-[#645cbb42] bg-primary-800 flex items-center justify-center mb-3">
+                            <img src="assets/images/insurance-icon.svg" alt="blog-img1" class="">
+                        </div>
+                        <h3 class="text-md md:text-lg mb-2">حجوزات مرنة</h3>
+                        <p class="text-md mb-0">حيث أم أعمال لإعلان, تم كلّ مايو بالرّد بمباركة. بحشد التي بخطوط لم الى, وقد لعدم العالمي وإيطالي أن. بحشد حصدت بـ وفي, بال أي المتّبعة لبلجيكا،. ان خطّة مشاركة بال, دون هو تصفح والتي العالم.</p>
+                    </div>
+                    <!-- مربع اختيار السبب -->
+                    <div class="rounded-tr-[25px] rounded-bl-[25px] shadow-card-2 bg-white p-5">
+                        <div class="w-[70px] h-[70px] rounded-full border-[5px] border-[#645cbb42] bg-primary-800 flex items-center justify-center mb-3">
+                            <img src="assets/images/passport-icon.svg" alt="blog-img1" class="">
+                        </div>
+                        <h3 class="text-md md:text-lg mb-2">حجوزات مرنة</h3>
+                        <p class="text-md mb-0">حيث أم أعمال لإعلان, تم كلّ مايو بالرّد بمباركة. بحشد التي بخطوط لم الى, وقد لعدم العالمي وإيطالي أن. بحشد حصدت بـ وفي, بال أي المتّبعة لبلجيكا،. ان خطّة مشاركة بال, دون هو تصفح والتي العالم.</p>
+                    </div>
+                    <!-- مربع اختيار السبب -->
+                    <div class="rounded-tr-[25px] rounded-bl-[25px] shadow-card-2 bg-white p-5">
+                        <div class="w-[70px] h-[70px] rounded-full border-[5px] border-[#645cbb42] bg-primary-800 flex items-center justify-center mb-3">
+                            <img src="assets/images/choose-booking-icon.svg" alt="blog-img1" class="">
+                        </div>
+                        <h3 class="text-md md:text-lg mb-2">حجوزات مرنة</h3>
+                        <p class="text-md mb-0">حيث أم أعمال لإعلان, تم كلّ مايو بالرّد بمباركة. بحشد التي بخطوط لم الى, وقد لعدم العالمي وإيطالي أن. بحشد حصدت بـ وفي, بال أي المتّبعة لبلجيكا،. ان خطّة مشاركة بال, دون هو تصفح والتي العالم.</p>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+  
+        
+        <!-- end Why Choose us section -->
+
+        <!-- start Customer Reviews section -->
+        <section class="customer-reviews-section py-10">
+          <div class="container">
+              <!-- عنوان القسم -->
+              <div class="text-center mb-8 md:mb-14">
+                  <h2>آراء العملاء</h2>
+                  <p class="max-w-[590px] mx-auto">حيث أم أعمال لإعلان، تم كلّ مايو بالرّد بمباركة. بحشد التي بخطوط لم الى، وقد لعدم العالمي وإيطالي أن. بحشد حصدت بـ وفي، بال أي المتّبعة لبلجيكا،. ان خطّة مشاركة بال، دون هو تصفح والتي العالم.</p>
+              </div>
+      
+              <!-- معلومات آراء العملاء -->
+              <div class="testimonial-full-slider max-w-[750px] mx-auto mt-8 md:mt-0 md:pl-6 lg:pl-12">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <div class="text-center">
+                                  <div class="w-[115px] h-[115px] overflow-hidden rounded-full relative mx-auto mb-5">
+                                      <img src="assets/images/testimonial-img1.jpg" alt="testimonial-img1" class="w-full h-full object-cover">
+                                  </div>
+                                  <div class="mt-5">
+                                      <h5 class="text-lg mb-0 block text-center  font-bold">آمي وودز</h5>
+                                      <span class="text-dark-800 text-md">نيويورك، الولايات المتحدة الأمريكية</span>
+                                  </div>
+                                  <div class="flex items-center justify-center gap-2 mb-4 text-md text-yellow-900">
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                  </div>
+                                  <p class="text-dark-900 text-lg mb-4">دولور ماجنا إيجت إست لوريم إبسوم. نيبه نيسل كونديمنتوم إد فينيناتيس أ كونديمنتوم فيتا سابين. تورتور كونديمنتوم لاكينيا كويس فيل إروس. ماسا ماسا ألتريس مي كويس هيندريريت دولور ماجنا. موربي تريستيكو سنيكتوس إت نيتوس إت ماليسوادا. سيم إت تورتور كونسيكوات إد بورتا نيبه فينيناتيس كراس.</p>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="text-center">
+                                  <div class="w-[115px] h-[115px] overflow-hidden rounded-full relative mx-auto mb-5">
+                                      <img src="assets/images/testimonial-img1.png" alt="testimonial-img1" class="w-full h-full object-cover">
+                                  </div>
+                                  <div class="mt-5">
+                                      <h5 class="text-lg mb-0 text-center block font-bold">آمي وودز</h5>
+                                      <span class="text-dark-800 text-md">نيويورك، الولايات المتحدة الأمريكية</span>
+                                  </div>
+                                  <div class="flex items-center justify-center gap-2 mb-4 text-md text-yellow-900">
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                      <i class="fa-solid fa-star"></i>
+                                  </div>
+                                  <p class="text-dark-900 text-lg mb-4">دولور ماجنا إيجت إست لوريم إبسوم. نيبه نيسل كونديمنتوم إد فينيناتيس أ كونديمنتوم فيتا سابين. تورتور كونديمنتوم لاكينيا كويس فيل إروس. ماسا ماسا ألتريس مي كويس هيندريريت دولور ماجنا. موربي تريستيكو سنيكتوس إت نيتوس إت ماليسوادا. سيم إت تورتور كونسيكوات إد بورتا نيبه فينيناتيس كراس.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- سهم التمرير -->
+                      <div class="slider-arrow text-2xl flex items-center text-primary-900 justify-center max-w-fit mx-auto gap-1">
+                          <div class="swiper-button-prev static m-0 after:hidden"><i class="fa-light fa-arrow-left text-primary-900"></i></div>
+                          <div class="swiper-pagination static m-0 flex justify-center items-center gap-0"></div>
+                          <div class="swiper-button-next static m-0 after:hidden"><i class="fa-light fa-arrow-right text-primary-900"></i></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <!-- end Customer Reviews section -->
+
+
+      <!-- start Latest Blog & News section -->
+      <section class="latest-blog-section py-10 md:py-16 relative">
+        <!-- container -->
+        <div class="container">
+            <div class="md:flex items-end justify-between mb-8 md:mb-14">
+                <div class="mb-5 md:mb-0">
+                    <h2>أحدث مقالات السفر</h2>
+                    <p class="md:max-w-[500px] m-0">حيث أم أعمال لإعلان، تم كلّ مايو بالرّد بمباركة. بحشد التي بخطوط لم الى، وقد لعدم العالمي وإيطالي أن. بحشد حصدت بـ وفي، بال أي المتّبعة لبلجيكا،. ان خطّة مشاركة بال، دون هو تصفح والتي العالم. tempor incididunt</p>
+                </div>
+                <div>
+                    <a href="blog-grid.html" class="btn btn-primary">عرض الكل</a>
+                </div>
+            </div>
+    
+            <!-- قائمة البلوق الشبكية -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-10">
+                <!-- بلوق الشبكة -->
+                <div class="relative group lg:row-span-3 md:col-span-2 lg:col-span-3">
+                    <!-- بلوق الشبكة الصورة -->
+                    <div class="relative w-full overflow-hidden before:pt-[56%] before:block rounded-2xl">
+                        <a href="blog-detail-2.html"><img src="assets/images/blog-detail-img3.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"></a>
+                    </div>
+                    <!-- بلوق الشبكة المعلومات -->
+                    <div class="py-5">
+                        <div class="">
+                            <div class="flex gap-5 mb-3">
+                                <span class="text-md text-dark-800 flex items-center gap-2"><i class="fa-regular fa-calendar text-primary-900"></i> 10 يناير 2023</span>
+                                <span class="text-md text-dark-800 flex items-center gap-2"><i class="fa-sharp fa-light fa-pen-to-square text-primary-900"></i> بواسطة المشرف</span>
+                            </div>
+                            <h3 class="text-xl md:text-25 xl:leading-normal mb-2 hover:text-primary-900"><a href="blog-detail-2.html">غير مكانك واحصل على هواء نقي</a></h3>
+                            <p class="text-md leading-normal text-dark-800">دولور ماجنا إيجت إست لوريم إبسوم. نيبه نيسل كونديمنتوم إد فينيناتيس أ كونديمنتوم فيتا سابين. تورتور كونديمنتوم لاكينيا كويس فيل إروس. ماسا ماسا ألتريس مي كويس هيندريريت دولور ماجنا.</p>
+                            <a href="blog-detail-2.html" class="btn btn-primary">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- بلوق الشبكة -->
+                <div class="relative lg:flex items-center gap-5 group lg:col-span-2 border-b border-primary-800 lg:pb-10 mb-0">
+                    <!-- بلوق الشبكة الصورة -->
+                    <div class="relative w-full lg:max-w-[210px] overflow-hidden before:pt-[72%] before:block rounded-2xl">
+                        <a href="blog-detail-2.html"><img src="assets/images/blog-img20.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"></a>
+                    </div>
+                    <!-- بلوق الشبكة المعلومات -->
+                    <div class="py-5">
+                        <div class="">
+                            <div class="flex gap-5 mb-3">
+                                <span class="text-sm text-dark-800 flex items-center gap-2"><i class="fa-regular fa-calendar text-primary-900"></i> 5 مارس 2022</span>
+                                <span class="text-sm text-dark-800 flex items-center gap-2"><i class="fa-sharp fa-light fa-pen-to-square text-primary-900"></i> بواسطة المشرف</span>
+                            </div>
+                            <h3 class="text-xl xl:leading-normal mb-2 hover:text-primary-900"><a href="blog-detail-2.html">احزم بحكمة قبل السفر</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- بلوق الشبكة -->
+                <div class="relative lg:flex items-center gap-5 group lg:col-span-2 border-b border-primary-800 lg:pb-10 mb-0">
+                    <!-- بلوق الشبكة الصورة -->
+                    <div class="relative w-full lg:max-w-[210px] overflow-hidden before:pt-[72%] before:block rounded-2xl">
+                        <a href="blog-detail-2.html"><img src="assets/images/portfolio-img7.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"></a>
+                    </div>
+                    <!-- بلوق الشبكة المعلومات -->
+                    <div class="py-5">
+                        <div class="">
+                            <div class="flex gap-5 mb-3">
+                                <span class="text-sm text-dark-800 flex items-center gap-2"><i class="fa-regular fa-calendar text-primary-900"></i> 23 أكتوبر 2022</span>
+                                <span class="text-sm text-dark-800 flex items-center gap-2"><i class="fa-sharp fa-light fa-pen-to-square text-primary-900"></i> بواسطة المشرف</span>
+                            </div>
+                            <h3 class="text-xl xl:leading-normal mb-2 hover:text-primary-900"><a href="blog-detail-2.html">حتى النقاط القوية تعرض</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- بلوق الشبكة -->
+                <div class="relative lg:flex items-center gap-5 group lg:col-span-2">
+                    <!-- بلوق الشبكة الصورة -->
+                    <div class="relative w-full lg:max-w-[210px] overflow-hidden before:pt-[72%] before:block rounded-2xl">
+                        <a href="blog-detail-2.html"><img src="assets/images/blog-detail-img2.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"></a>
+                    </div>
+                    <!-- بلوق الشبكة المعلومات -->
+                    <div class="py-5">
+                        <div class="">
+                            <div class="flex gap-5 mb-3">
+                                <span class="text-sm text-dark-800 flex items-center gap-2"><i class="fa-regular fa-calendar text-primary-900"></i> 14 نوفمبر 2022</span>
+                                <span class="text-sm text-dark-800 flex items-center gap-2"><i class="fa-sharp fa-light fa-pen-to-square text-primary-900"></i> بواسطة المشرف</span>
+                            </div>
+                            <h3 class="text-xl xl:leading-normal mb-2 hover:text-primary-900"><a href="blog-detail-2.html">يعيشون في Bookmarksgrove مفصولين</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      <!-- end Latest Blog & News section -->
+
+  </div>
+
+  <!-- footer -->
+  <footer class="footer-part relative bg-primary-800">
+    <!-- container -->
+    <div class="container relative z-1">
+        <!-- footer center-->
+        <div class="flex flex-wrap -mx-3 py-14 text-dark-800">
+
+            <div class="w-full lg:w-2/5 px-3">
+                <!-- Get Updates & More -->
+                <div class="lg:max-w-[390px] mb-6 lg:mb-0">
+                    <h6 class="text-md md:text-lg mb-2">احصل على التحديثات والمزيد</h6>
+                    <p class="text-md">اشترك في النشرة الإخبارية المجانية واحصل على خصم 20% على حجزك التالي</p>
+                    <!-- newsletter form -->
+                    <form class="flex items-center justify-center bg-white shadow-input rounded-md hover:border-primary-900">
+                        <input type="text" placeholder="عنوان بريدك الإلكتروني" name="" class="text-dark-900 text-md md:text-lg w-full py-3 bg-transparent px-3 outline-none">
+                        <button type="button" class="btn btn-primary w-full max-w-[135px] py-3 rounded-md text-md shrink-0">إرسال</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/5 px-3">
+                <!-- footer column -->
+                <div class="">
+                    <h4 class="text-md md:text-lg mb-2">روابط سريعة</h4>
+                    <!-- footer menu -->
+                    <ul class="space-y-3 text-md text-dark-800">
+                        <li>
+                            <a href="tour.html" class="text-dark-800 hover:text-primary-900">الجولات</a>
+                        </li>
+                        <li>
+                            <a href="destination.html" class="text-dark-800 hover:text-primary-900">الوجهات</a>
+                        </li>
+                        <li>
+                            <a href="blog-grid.html" class="text-dark-800 hover:text-primary-900">المدونة</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-dark-800 hover:text-primary-900">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/5 px-3">
+                <div class="">
+                    <h4 class="text-md md:text-lg mb-2">تواصل معنا</h4>
+                    <!-- footer contact detail -->
+                    <p class="pl-7 relative text-15 mb-3"><span class="absolute top-2 left-0"></span>28 W New York St، Tiblisi ,Gerogia</p>
+                    <p class="pl-7 relative text-15 mb-4"><span class="absolute top-2 left-0"></span><a href="tel:(630) 844-0400" class="hover:text-primary-900">
+                      994508394000+</a></p>
+
+                    <!-- Social icon -->
+                    <ul dir="ltr" class="flex items-center justify-end space-x-4 text-md text-white">
+                        <li>
+                            <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-900 hover:bg-primary-700 hover:text-primary-900"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-900 hover:bg-primary-700 hover:text-primary-900"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-900 hover:bg-primary-700 hover:text-primary-900"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-900 hover:bg-primary-700 hover:text-primary-900"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- footer bottom-->
+    <div class="py-12 bg-dark-900 ">
+        <!-- container -->
+        <div class="container relative z-1 text-center lg:text-left lg:flex items-center justify-between">
+            <p class="text-white text-md lg:mb-0">حقوق الطبع والنشر 2024 <a href="index-1.html" class="text-white underline hover:text-primary-900">CodeCraft Innovation</a>. جميع الحقوق محفوظة.<br> التصميم بواسطة <a href="#" class="text-white hover:text-primary-900 underline ml-1">CodeCraft Innovation</a>.</p>
+
+            <ul class="flex items-center justify-center flex-wrap lg:justify-end text-md md:text-lg text-white gap-3 sm:gap-6">
+                <li><a href="javascript:;" class="hover:text-primary-900">سياسة الخصوصية</a></li>
+                <li><a href="about.html" class="hover:text-primary-900">من نحن</a></li>
+                <li><a href="contact.html" class="hover:text-primary-900">اتصل بنا</a></li>
+                <li><a href="faqs.html" class="hover:text-primary-900">الأسئلة الشائعة</a></li>
+                <li><a href="javascript:;" class="hover:text-primary-900">الشروط والأحكام</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+</div>
+
+  <!-- Custom Libraries script js start -->
+  <!-- jquery min js file -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- Swiper bundle js file -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Isotope js file -->
+  <script src="assets/js/isotope.pkgd.js"></script>  
+  <!-- Aos animation js file -->
+  <script src="assets/js/aos.js"></script>
+  <!-- Magnific popup min js file -->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+
+  <!-- custom script js -->
+  <script src="assets/js/alpine.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <!-- Use this minifiy js for project speeded loading -->
+  <!-- <script src="assets/js/custom.min.js"></script> -->
+
+</body>
+</html>
